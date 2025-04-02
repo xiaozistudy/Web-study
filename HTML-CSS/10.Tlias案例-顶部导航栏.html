@@ -1,0 +1,54 @@
+<!-- 声明文档类型为HTML5 -->
+<!DOCTYPE html>
+<html lang="zh-CN"> <!-- 设置网页语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，支持中文显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- 使页面在移动设备上能够自适应屏幕宽度 -->
+    <title>Tlias智能学习辅助系统</title> <!-- 设置网页标题 -->
+    
+    <!-- 内部CSS样式定义 -->
+    <style>
+        /* 定义顶部导航栏的样式 */
+        .topnav {
+            background-color: #d2e1e5; /* 设置背景颜色为深灰色 */
+            overflow: hidden; /* 防止子元素溢出 */
+            display: flex; /* 使用Flexbox布局  弹性布局 */
+            justify-content: space-between; /* 左右两端对齐 */
+            padding: 10px 20px; /* 设置内边距，上下10px，左右20px */
+        }
+
+        /* 定义导航栏中链接的样式 */
+        .topnav a {
+            color: white; /* 文字颜色为白色 */
+            text-align: center; /* 居中对齐文本 */
+            padding: 14px 16px; /* 设置内边距，让链接看起来更美观 */
+            text-decoration: none; /* 去掉下划线 */
+            font-size: 17px; /* 设置字体大小 */
+        }
+
+        /* 定义鼠标悬停在链接上的样式 */
+        .topnav a:hover {
+            color: black; /* 文字颜色变为黑色 */
+            background-color: transparent; /* 鼠标悬停时背景颜色为透明 */
+        }
+
+        /* 定义导航栏中标题的样式 */
+        .topnav h1 {
+            margin: 0; /* 去掉默认的外边距 */
+            font-size: 24px; /* 设置字体大小 */
+            font-weight: bold; /* 字体加粗 */  
+            /* 设置字体颜色为白色 */
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏容器 -->
+    <div class="topnav">
+        <h1>Tlias智能学习辅助系统</h1> <!-- 导航栏左侧的标题 -->
+        <a href="#">退出登录</a> <!-- 导航栏右侧的退出登录链接 -->
+    </div>
+</body>
+</html>
