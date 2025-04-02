@@ -1,0 +1,209 @@
+<!-- 声明文档类型为HTML5 -->
+<!DOCTYPE html>
+<html lang="zh-CN"> <!-- 设置网页语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8，支持中文显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- 使页面在移动设备上能够自适应屏幕宽度 -->
+    <title>Tlias智能学习辅助系统</title> <!-- 设置网页标题 -->
+    
+    <!-- 内部CSS样式定义 -->
+    <style>
+        /* 定义顶部导航栏的样式 */
+        .topnav {
+            background-color: #d2e1e5; /* 设置背景颜色为深灰色 */
+            overflow: hidden; /* 防止子元素溢出 */
+            display: flex; /* 使用Flexbox布局  弹性布局 */
+            justify-content: space-between; /* 左右两端对齐 */
+            padding: 10px 20px; /* 设置内边距，上下10px，左右20px */
+        }
+
+        /* 定义导航栏中链接的样式 */
+        .topnav a {
+            color: white; /* 文字颜色为白色 */
+            text-align: center; /* 居中对齐文本 */
+            padding: 14px 16px; /* 设置内边距，让链接看起来更美观 */
+            text-decoration: none; /* 去掉下划线 */
+            font-size: 17px; /* 设置字体大小 */
+        }
+
+        /* 定义鼠标悬停在链接上的样式 */
+        .topnav a:hover {
+            color: black; /* 文字颜色变为黑色 */
+            background-color: transparent; /* 鼠标悬停时背景颜色为透明 */
+        }
+
+        /* 定义导航栏中标题的样式 */
+        .topnav h1 {
+            margin: 0; /* 去掉默认的外边距 */
+            font-size: 24px; /* 设置字体大小 */
+            font-weight: bold; /* 字体加粗 */  
+            /* 设置字体颜色为白色 */
+            color: white;
+
+        }
+
+        /* 搜索表单样式 */
+        .search-form {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 10px; /* 控件之间的间距 */
+            margin: 20px 0;
+        }
+        .search-form input[type="text"], .search-form select {
+            padding: 5px; /* 输入框内边距 */
+            width: 260px; /* 宽度 */
+        }
+        .search-form button {
+            padding: 5px 15px; /* 按钮内边距 */
+        }
+
+         /* 表格样式 */
+         table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        img {
+            max-width: 50px;
+            max-height: 50px;
+            border-radius: 50%;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .action-buttons button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+         /* 页脚版权区域样式 */
+         .footer {
+            background-color: #808080;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        #continer {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="continer">
+        <!-- 顶部导航栏容器 -->
+    <div class="topnav">
+        <h1>Tlias智能学习辅助系统</h1> <!-- 导航栏左侧的标题 -->
+        <a href="#">退出登录</a> <!-- 导航栏右侧的退出登录链接 -->
+    </div>
+    
+    <!-- 搜索表单区域 -->
+    <form class="search-form" action="#" method="GET">
+        <label for="name">姓名：</label> <!-- 添加标签，并用for属性关联input的id -->
+        <input type="text" id="name" name="name" placeholder="请输入姓名" />
+        
+        <label for="gender">性别：</label> <!-- 性别标签 -->
+        <select id="gender" name="gender">
+            <option value="">请选择</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+        
+        <label for="position">职位：</label> <!-- 职位标签 -->
+        <select id="position" name="position">
+            <option value="">请选择</option>
+            <option value="班主任">班主任</option>
+            <option value="讲师">讲师</option>
+            <option value="学工主管">学工主管</option>
+            <option value="教研主管">教研主管</option>
+            <option value="咨询师">咨询师</option>
+        </select>
+        
+        <button type="submit">查询</button>
+        <button type="reset">清空</button>
+    </form>
+
+     <!-- 表格展示区 -->
+     <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>头像</th>
+                <th>职位</th>
+                <th>入职日期</th>
+                <th>最后操作时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>令狐冲</td>
+                <td>男</td>
+                <td><img src="https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/1.jpg" alt="头像"/></td>
+                <td>讲师</td>
+                <td>2022-01-01</td>
+                <td>2023-03-15</td>
+                <td>
+                    <div class="action-buttons">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>任盈盈</td>
+                <td>女</td>
+                <td><img src="https://via.placeholder.com/50" alt="头像"/></td>
+                <td>咨询师</td>
+                <td>2022-02-15</td>
+                <td>2023-04-01</td>
+                <td>
+                    <div class="action-buttons">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>岳不群</td>
+                <td>男</td>
+                <td><img src="https://via.placeholder.com/50" alt="头像"/></td>
+                <td>教研主管</td>
+                <td>2021-10-01</td>
+                <td>2023-05-10</td>
+                <td>
+                    <div class="action-buttons">
+                        <button>编辑</button>
+                        <button>删除</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 页脚版权区域 -->
+    <div class="footer">
+        <p>江苏传智播客教育科技股份有限公司</p>
+        <p>版权所有 Copyright 2006-2024 All Rights Reserved</p>
+    </div>
+    </div>
+</body>
+</html>
