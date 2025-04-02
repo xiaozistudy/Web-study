@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-函数</title>
+</head>
+<body>
+  
+
+  <script>
+//函数定义及调用  具名函数
+  function add(a,b){
+   return a+b;
+  }
+  let c = add(1,2);
+  console.log(c);
+  //匿名函数  1. 函数表达式  2. 函数声明
+  let add2 = function(a,b){
+    return a+b;
+  }
+  let d = add2(1,2);
+  console.log(d);
+  //箭头函数
+  let add3 = (a,b)=>{
+    return a+b;
+  }
+  let e = add3(1,2);
+  console.log(e); 
+
+   //  let user = {
+  //    name: '张三',
+  //    age: 18,
+  //    sex: '男',
+  //    say: function(){
+  //      console.log('我是'+this.name+',今年'+this.age+'岁');
+  //    }
+  //  }
+  let user = {
+     name: '张三',
+     age: 18,
+     sex: '男',
+     say(){
+       console.log('我是'+this.name+',今年'+this.age+'岁');
+     }
+   }
+   let user1 = {
+     name: '张三',
+     age: 18,
+     sex: '男',
+     say:() => { //箭头函数 this 指向父函数的name   不推荐
+       console.log('我是'+this.name+',今年'+this.age+'岁');
+     }
+   }
+   user.say();
+   console.log(user.name);
+  </script>
+</body>
+</html>

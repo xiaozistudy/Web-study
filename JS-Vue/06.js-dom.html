@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="titlel">111</h1>
+  <h1>222</h1>
+  <h1>333</h1>
+  <script>
+    //1.修改第一个h1标签的文本内容
+    // document.getElementsByTagName('h1')[0].innerHTML = '1111111111
+    //1.1获取dom对象
+    let h1 = document.querySelector('#titlel');  //获取dom对象
+    let h2 = document.querySelector('h1');  //获取第一个h1标签
+    let h3 = document.querySelectorAll('h1');
+    //1.2调用dom对象中的属性或方法
+    h3[1].innerHTML = '修改后的文本';
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-函数</title>
+</head>
+<body>
+  
+
+  <script>
+ let user= {
+    name: '张三',
+    age: 18,
+    sex: '男'
+ }
+ alert(JSON.stringify(user));  //  js对象转换成字符串
+ let userJSON = `{"name": "张三","age": 18,"sex": "男"}`;
+  console.log(JSON.parse(userJSON).name);
+  </script>
+</body>
+</html>
